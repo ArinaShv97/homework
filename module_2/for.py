@@ -6,19 +6,14 @@ not_primes = []
 for n in numbers:
     if n==1:
         continue
+    for i in (2,16):
+        if i % n  == 0:
 
-        for i in (2,16):
-            if i % n  == 0:
-                is_primes = 0
-                break
-                if is_primes:
-                    primes.append(n)
-                    print('Простые числа', primes)
-                else:
-                    not_primes.append(n)
-                    print('Составные числа', not_primes)
-                    # Не понимаю,почему ничего не выводит
+            primes.append(n)
+        print('primes', primes)
 
-
-
+    else:
+        not_primes.append(n)
+        print('not_primes', not_primes)
+    # Не понимаю,почему некорректно выводит
 
